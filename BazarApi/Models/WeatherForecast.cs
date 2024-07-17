@@ -1,4 +1,4 @@
-namespace BazarApi
+namespace BazarApi.Models
 {
     public class WeatherForecast
     {

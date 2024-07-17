@@ -1,3 +1,4 @@
+using BazarApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BazarApi.Controllers
