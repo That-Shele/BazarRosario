@@ -1,7 +1,10 @@
-﻿namespace BazarApp
+﻿
+
+namespace BazarApp
 {
     public partial class App : Application
     {
+        
         public App()
         {
             InitializeComponent();

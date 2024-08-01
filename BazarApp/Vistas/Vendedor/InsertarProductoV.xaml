@@ -3,10 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Vendedor.InsertarProductoV"
              Title="InsertarProductoV">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ScrollView>
+    <VerticalStackLayout Padding="10">
+        <Entry x:Name="nombreProdu" Placeholder="Nombre del producto" />
+            <Label Text="Categoría del producto"/>
+            <Picker x:Name="cateProdu" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Electrodomésticos</x:String>
+                        <x:String>Juguetes</x:String>
+                        <x:String>Ropa</x:String>
+                        <x:String>Deportes</x:String>
+                        <x:String>Confitería</x:String>
+                        <x:String>Condimentos</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry x:Name="tipoProdu" Placeholder="Tipo de producto" />
+            <Entry x:Name="precioProdu" Placeholder="Precio del producto" />
+        <Entry x:Name="stockProdu" Placeholder="Stock del producto" />
+        <Image x:Name="imgDisplay" HorizontalOptions="Center" HeightRequest="500" WidthRequest="500"/>
+        <Button x:Name="buscaImg" HorizontalOptions="Center" Clicked="buscaImg_Clicked" Padding="10" Text="Agregar una imágen"/>
+            <Label Text="Es oferta?"/>
+            <Switch x:Name="esOferta"  IsToggled="false" />
+        <Button x:Name="btnSave" Text="Guardar" Margin="0,20" Clicked="btnSave_Clicked"/>
+        <Button x:Name="btnCancel" Text="Cancelar" Clicked="btnCancel_Clicked" />
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

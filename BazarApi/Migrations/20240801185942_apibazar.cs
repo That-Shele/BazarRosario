@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BazarApi.Migrations
 {
     /// <inheritdoc />
-    public partial class bazar : Migration
+    public partial class apibazar : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

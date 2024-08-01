@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BazarApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240717225237_bazar")]
-    partial class bazar
+    [Migration("20240801185942_apibazar")]
+    partial class apibazar
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

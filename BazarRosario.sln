@@ -3,14 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BazarApi", "BazarApi\BazarApi.csproj", "{DD9DA2CD-ADE1-46FD-AEA5-FE9EB7993B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BazarApi", "BazarApi\BazarApi.csproj", "{DD9DA2CD-ADE1-46FD-AEA5-FE9EB7993B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BazarApp", "BazarApp\BazarApp.csproj", "{118A5C6A-EAE0-44DB-A70F-1148D05FB2AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BazarApp", "BazarApp\BazarApp.csproj", "{118A5C6A-EAE0-44DB-A70F-1148D05FB2AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E3712B0-AC14-4188-A1C7-45107F97A6E1}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BazarLib", "BazarLib\BazarLib.csproj", "{57F3AFEC-2B58-4DB0-8E00-4E2173975D0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,10 @@ Global
 		{118A5C6A-EAE0-44DB-A70F-1148D05FB2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{118A5C6A-EAE0-44DB-A70F-1148D05FB2AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{118A5C6A-EAE0-44DB-A70F-1148D05FB2AB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{57F3AFEC-2B58-4DB0-8E00-4E2173975D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F3AFEC-2B58-4DB0-8E00-4E2173975D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F3AFEC-2B58-4DB0-8E00-4E2173975D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F3AFEC-2B58-4DB0-8E00-4E2173975D0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

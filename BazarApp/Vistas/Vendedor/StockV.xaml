@@ -3,10 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Vendedor.StockV"
              Title="StockV">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <FlexLayout Direction="Column">
+            <HorizontalStackLayout Padding="10" FlexLayout.Basis="60">
+                <Button x:Name="btnShowProducts" Text="Mostrar productos" Clicked="btnShowProducts_Clicked" />
+            </HorizontalStackLayout>
+            <ListView x:Name="stockListView" FlexLayout.Grow="1" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout Padding="5">
+                                <Label Text="{Binding NombreProdu}" FontSize="17" FontAttributes="Bold" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding ProduId}" />
+                                    <Label Grid.Column="2" Text="{Binding Stock}" FontAttributes="Bold" TextColor="Red" />
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </FlexLayout>
+    </ScrollView>
 </ContentPage>

@@ -64,6 +64,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\BazarLib\BazarLib.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Vistas\Cliente\CategoriasC.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
