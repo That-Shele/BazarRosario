@@ -2,6 +2,7 @@
 using BazarLib.IoC;
 using BazarApp.Vistas.Vendedor;
 using BazarApp.Vistas.Cliente;
+using BazarApp.Vistas;
 
 namespace BazarApp
 {
@@ -20,8 +21,12 @@ namespace BazarApp
             builder.Services.AddBazarApiClient(x => x.ApiBaseAddress = "https://localhost:7254/");
             builder.Services.AddTransient<InicioV>();
             builder.Services.AddTransient<InicioC>();
+            builder.Services.AddTransient<OfertasC>();
+            builder.Services.AddTransient<OfertasV>();
             builder.Services.AddTransient<StockV>();
             builder.Services.AddTransient<ProductoDetalleC>();
+            builder.Services.AddScoped<ListaC>();
+            builder.Services.AddSingleton<Login>();
 
 #if DEBUG
             builder.Logging.AddDebug();

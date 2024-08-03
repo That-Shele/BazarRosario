@@ -5,9 +5,6 @@
              Title="InicioC">
     <ScrollView>
         <FlexLayout Direction="Column">
-            <HorizontalStackLayout Padding="10" FlexLayout.Basis="60">
-                <Button x:Name="btnShowProducts" Text="Mostrar productos" Clicked="btnShowProducts_Clicked" />
-            </HorizontalStackLayout>
             <ListView x:Name="productListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -20,7 +17,7 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding ProduId}" />
+                                    <Label Grid.Column="0" Text="{Binding Categoria}" />
                                     <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="Red" />
                                 </Grid>
                             </VerticalStackLayout>

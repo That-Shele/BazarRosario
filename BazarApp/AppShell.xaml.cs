@@ -1,7 +1,10 @@
-﻿namespace BazarApp
+﻿using BazarApp.Abstractions;
+
+namespace BazarApp
 {
     public partial class AppShell : Shell
     {
+        ILista lista = DependencyService.Get<ILista>();
         public AppShell()
         {
             InitializeComponent();
@@ -11,10 +14,10 @@
                     //Navigation.PushAsync(new NavigationPage(new DetailsInfo(arg)));  
 
                     inicioV.IsVisible = false;
-                    cateV.IsVisible = false;
+                    oferV.IsVisible = false;
                     stockV.IsVisible = false;
                     inicioC.IsVisible = true;
-                    cateC.IsVisible = true;
+                    oferC.IsVisible = true;
                     listaC.IsVisible = true;
                 });
             });
@@ -25,10 +28,10 @@
                     //Navigation.PushAsync(new NavigationPage(new DetailsInfo(arg)));  
 
                     inicioC.IsVisible = false;
-                    cateC.IsVisible = false;
+                    oferC.IsVisible = false;
                     listaC.IsVisible = false;
                     inicioV.IsVisible = true;
-                    cateV.IsVisible = true;
+                    oferV.IsVisible = true;
                     stockV.IsVisible = true;
                 });
             });
@@ -39,10 +42,10 @@
                     //Navigation.PushAsync(new NavigationPage(new DetailsInfo(arg)));  
 
                     inicioV.IsVisible = true;
-                    cateV.IsVisible = true;
+                    oferC.IsVisible = true;
                     stockV.IsVisible = true;
                     inicioC.IsVisible = true;
-                    cateC.IsVisible = true;
+                    oferV.IsVisible = true;
                     listaC.IsVisible = true;
                 });
             });
@@ -53,6 +56,7 @@
             var listener = sender as FlyoutItem;
             if (listener.CurrentItem.Title == "Cerrar Sesión")
             {
+                lista.Lista.Clear();
                 MessagingCenter.Send<App, string>(App.Current as App, "Login", "");
             }
         }

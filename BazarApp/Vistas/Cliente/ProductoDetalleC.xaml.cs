@@ -1,3 +1,4 @@
+using BazarApp.Abstractions;
 using BazarLib;
 using BazarLib.Models.ApiModels;
 
@@ -18,7 +19,32 @@ public partial class ProductoDetalleC : ContentPage
     }
     private async void btnSave_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PopAsync();
+        if (_productos != null && eCantidad.Text != null && Convert.ToInt32(eCantidad.Text) <= _productos.Stock )
+        {
+            try
+            {
+                ILista lista = DependencyService.Get<ILista>();
+                lista.Lista.Add(new Lista
+                {
+                    ProduId = _productos.ProduId,
+                    NombreProdu = nombre.Text,
+                    NombreUsu = App.usuarios.NombreUsu,
+                    Pago = Convert.ToDecimal(precio.Text) * Convert.ToInt32(eCantidad.Text),
+                    Cantidad = Convert.ToInt32(eCantidad.Text)
+                });
+                ListaC lc = new ListaC(_clientService);
+                lc.total += Convert.ToDecimal(precio.Text) * Convert.ToInt32(eCantidad.Text);
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+              await DisplayAlert("Error", ex.ToString(), "Ok");
+            }
+        }
+        else
+        {
+            await DisplayAlert("Error", "Datos incorrectos/Stock insuficiente", "Ok");
+        }
     }
 
     private async void btnCancel_Clicked(object sender, EventArgs e)

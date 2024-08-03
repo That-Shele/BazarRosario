@@ -6,9 +6,8 @@
     <ScrollView>
     <FlexLayout Direction="Column">
         <HorizontalStackLayout Padding="10" FlexLayout.Basis="60">
-            <Button x:Name="btnAdd" Text="Añadir" Margin="0,0,10,0" Clicked="btnAdd_Clicked"  />
-            <Button x:Name="btnShowProducts" Text="Mostrar productos" Clicked="btnShowProducts_Clicked" />
-        </HorizontalStackLayout>
+                <Button x:Name="btnAdd" Text="Añadir" Margin="0,0,10,0" Clicked="btnAdd_Clicked"  />
+            </HorizontalStackLayout>
         <ListView x:Name="productListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
             <ListView.ItemTemplate>
                 <DataTemplate>

@@ -3,14 +3,15 @@ using BazarLib.Models.ApiModels;
 
 namespace BazarApp.Vistas.Cliente;
 
-public partial class InicioC : ContentPage
+public partial class OfertasC : ContentPage
 {
     private readonly BazarClientService _clientService;
-    public InicioC(BazarClientService clientService)
+    public OfertasC(BazarClientService bazarClientService)
 	{
 		InitializeComponent();
-		_clientService = clientService;
-	}
+        _clientService = bazarClientService;
+    }
+
 
     private async void productListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
@@ -28,7 +29,6 @@ public partial class InicioC : ContentPage
     protected async override void OnAppearing()
     {
         base.OnAppearing();
-        this.productListView.ItemsSource = await _clientService.GetProductos();
+        this.ofertasListView.ItemsSource = await _clientService.GetOfertas();
     }
-
 }

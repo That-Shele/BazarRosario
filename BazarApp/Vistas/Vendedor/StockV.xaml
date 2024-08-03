@@ -5,9 +5,6 @@
              Title="StockV">
     <ScrollView>
         <FlexLayout Direction="Column">
-            <HorizontalStackLayout Padding="10" FlexLayout.Basis="60">
-                <Button x:Name="btnShowProducts" Text="Mostrar productos" Clicked="btnShowProducts_Clicked" />
-            </HorizontalStackLayout>
             <ListView x:Name="stockListView" FlexLayout.Grow="1" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>

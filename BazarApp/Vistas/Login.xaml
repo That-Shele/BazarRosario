@@ -6,13 +6,13 @@
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False">
     <ScrollView>
-    <VerticalStackLayout
+        <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-        <Label Text="En proceso..."
-       HorizontalOptions="Center"/>
-        <Button Text="Cliente" HorizontalOptions="Center" WidthRequest="400" x:Name="cli" Clicked="cli_Clicked"/>
-        <Button Text="Vendedor" HorizontalOptions="Center" WidthRequest="400" x:Name="ven" Clicked="ven_Clicked"/>
+            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" />
+            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" />
+            <Button Text="Iniciar Sesión" HorizontalOptions="Center" WidthRequest="400" x:Name="Log" Clicked="Log_Clicked"/>
+            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="SignUp" Clicked="SignUp_Clicked"/>
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

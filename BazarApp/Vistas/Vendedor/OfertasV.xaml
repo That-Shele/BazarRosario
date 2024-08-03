@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BazarApp.Vistas.Cliente.ListaC"
-             Title="ListaC">
+             x:Class="BazarApp.Vistas.Vendedor.OfertasV"
+             Title="OfertasV">
     <ScrollView>
         <FlexLayout Direction="Column">
-            <HorizontalStackLayout Padding="10" FlexLayout.Basis="60">
-                <Button x:Name="btnLista" Text="Ver Carrito" Margin="0,0,10,0" Clicked="btnLista_Clicked"  />
-                <Button x:Name="btnFacturas" Text="Facturas realizadas" Clicked="btnFacturas_Clicked" />
-                <Button x:Name="btnGuardar" Text="Realizar compra" Margin="0,0,10,0" Clicked="btnGuardar_Clicked"  />
-            </HorizontalStackLayout>
-            <ListView x:Name="facturaListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="facturaListView_ItemTapped" >
+            <ListView x:Name="ofertasListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -22,8 +17,8 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="Red" />
-                                    <Label Grid.Column="2" Text="{Binding Cantidad}" FontAttributes="Bold" TextColor="Red" />
+                                    <Label Grid.Column="0" Text="OFERTA" TextColor="Red" IsVisible="{Binding EsOferta}" />
+                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="Red" />
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

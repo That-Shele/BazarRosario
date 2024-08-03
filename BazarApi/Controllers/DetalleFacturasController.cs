@@ -23,14 +23,14 @@ namespace BazarAPI.Controllers
 
         // GET api/<DetalleFacturasController>/5
         [HttpGet]
-        public FacturasDetalle GetDetalleFacturaById(int id)
+        public IEnumerable<FacturasDetalle> GetDetalleFacturaById(int id)
         {
-            return (FacturasDetalle)this.Context.FACTURAS_DETALLE.Where(detfac => detfac.CodFac == id);
+            return this.Context.FACTURAS_DETALLE.Where(detfac => detfac.CodFac == id);
         }
 
         // POST api/<DetalleFacturasController>
         [HttpPost]
-        public void AddDetalleFactura([FromBody] FacturasDetalle detalle)
+        public void AddDetalleFactura(FacturasDetalle detalle)
         {
             this.Context.FACTURAS_DETALLE.Add(detalle);
             this.Context.SaveChanges();

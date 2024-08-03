@@ -3,10 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BazarApi.Models
 {
-    [Keyless]
+    
     public class FacturasDetalle
     {
-
+        [Key]
+        public int Id { get; set; }
         [Required]
         public int CodFac { get; set; }
         [Required]

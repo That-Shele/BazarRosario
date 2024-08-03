@@ -30,6 +30,8 @@ namespace BazarApi.Migrations
                 name: "FACTURAS_DETALLE",
                 columns: table => new
                 {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     CodFac = table.Column<int>(type: "int", nullable: false),
                     NombreUsu = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
                     NombreProdu = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
@@ -38,6 +40,7 @@ namespace BazarApi.Migrations
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_FACTURAS_DETALLE", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(

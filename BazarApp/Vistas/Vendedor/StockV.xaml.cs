@@ -12,14 +12,10 @@ public partial class StockV : ContentPage
 
     }
 
-    private async void btnShowProducts_Clicked(object sender, EventArgs e)
+    protected async override void OnAppearing()
     {
-        await CargarProductos();
-    }
-    private async Task CargarProductos()
-    {
-        var lista = await _clientService.GetProductos();
-        stockListView.ItemsSource = lista;
+        base.OnAppearing();
+        this.stockListView.ItemsSource = await _clientService.GetProductos();
     }
 
 }

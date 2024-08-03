@@ -21,8 +21,8 @@
                 ContentTemplate="{DataTemplate cliente:InicioC}"
                 />
 
-        <ShellContent Title="Categorías Cliente" x:Name="cateC" Route="CategoriasC"
-            ContentTemplate="{DataTemplate cliente:CategoriasC}"
+        <ShellContent Title="Ofertas Cliente" x:Name="oferC" Route="OfertasC"
+            ContentTemplate="{DataTemplate cliente:OfertasC}"
            />
 
         <ShellContent Title="Lista Cliente" x:Name="listaC" Route="ListaC"
@@ -33,8 +33,8 @@
             ContentTemplate="{DataTemplate vendedor:InicioV}"
             />
 
-        <ShellContent Title="Categorías Vendedor" x:Name="cateV" Route="CategoriasV"
-                    ContentTemplate="{DataTemplate vendedor:CategoriasV}"
+        <ShellContent Title="Ofertas Vendedor" x:Name="oferV" Route="OfertasV"
+                    ContentTemplate="{DataTemplate vendedor:OfertasV}"
                     />
 
         <ShellContent Title="Stock Vendedor" x:Name="stockV" Route="StockV"

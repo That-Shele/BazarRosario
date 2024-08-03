@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BazarApp.Vistas.SignIn"
+             Title="SignIn">
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+            <Entry Placeholder="Nombre" x:Name="eName" HorizontalOptions="Center" WidthRequest="560" />
+            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" />
+            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" />
+            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="crear" Clicked="crear_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
