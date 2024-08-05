@@ -40,6 +40,10 @@
         <ShellContent Title="Stock Vendedor" x:Name="stockV" Route="StockV"
                 ContentTemplate="{DataTemplate vendedor:StockV}"
                 />
+        
+        <ShellContent Title="Usuarios" x:Name="usuV" Route="PanelUsuariosV"
+         ContentTemplate="{DataTemplate vendedor:PanelUsuariosV}"
+         />
     </FlyoutItem>
 
 </Shell>

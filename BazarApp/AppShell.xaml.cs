@@ -19,6 +19,7 @@ namespace BazarApp
                     inicioC.IsVisible = true;
                     oferC.IsVisible = true;
                     listaC.IsVisible = true;
+                    usuV.IsVisible = false;
                 });
             });
 
@@ -33,6 +34,7 @@ namespace BazarApp
                     inicioV.IsVisible = true;
                     oferV.IsVisible = true;
                     stockV.IsVisible = true;
+                    usuV.IsVisible = true;
                 });
             });
 
@@ -47,6 +49,7 @@ namespace BazarApp
                     inicioC.IsVisible = true;
                     oferV.IsVisible = true;
                     listaC.IsVisible = true;
+                    usuV.IsVisible = true;
                 });
             });
         }

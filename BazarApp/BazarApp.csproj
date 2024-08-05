@@ -96,6 +96,9 @@
 	  <MauiXaml Update="Vistas\Vendedor\OfertasV.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Vistas\Vendedor\PanelUsuariosV.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Vistas\Vendedor\StockV.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

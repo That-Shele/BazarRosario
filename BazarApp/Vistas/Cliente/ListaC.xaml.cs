@@ -16,10 +16,10 @@ public partial class ListaC : ContentPage
         _clientService = bazarClientService;
     }
 
-    private async void facturaListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    private async void listaListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-		if (facturaListView.ItemsSource == lista.Lista)
-		{
+        if (listaListView.ItemsSource == lista.Lista)
+        {
             var productoFac = (Lista)e.Item;
             var acciones = await DisplayActionSheet("Acciones", "Cancelar", null, "Eliminar");
 
@@ -28,51 +28,53 @@ public partial class ListaC : ContentPage
                 case "Eliminar":
                     total = total - productoFac.Pago;
                     lista.Lista.Remove(productoFac);
-                    facturaListView.ItemsSource = null;
-                    facturaListView.ItemsSource = lista.Lista;
+                    listaListView.ItemsSource = null;
+                    listaListView.ItemsSource = lista.Lista;
                     break;
             }
         }
         else
         {
-            try
-            {
-                var factura = (Facturas)e.Item;
-                LoadFacturasDetalle(factura.CodFac);
-            }
-            catch
-            {
-                await DisplayAlert("Error", "No hay más datos que mostrar", "Ok");
-            }
+            await DisplayAlert("Error", "No hay más datos que mostrar", "Ok");
         }
+            
     }
 
     private void btnLista_Clicked(object sender, EventArgs e)
     {
+        this.listaListView.IsVisible = true;
+        this.facturasListView.IsVisible = false;
+        this.facturasListView.ItemsSource = null;
         LoadListaCompra();
     }
 
     private void btnFacturas_Clicked(object sender, EventArgs e)
     {
+        this.facturasListView.IsVisible = true;
+        this.listaListView.IsVisible = false;
+        this.listaListView.ItemsSource = null;
         LoadFacturas();
     }
 
 
     public void LoadListaCompra()
     {
-        this.facturaListView.ItemsSource = lista.Lista;
+        this.listaListView.ItemsSource = null;
+        this.listaListView.ItemsSource = lista.Lista;
+        
     }
 
     public async void LoadFacturas()
     {
         var facturas = await _clientService.GetFacturasUsu(App.usuarios.NombreUsu);
-        this.facturaListView.ItemsSource = facturas;
+        this.facturasListView.ItemsSource = facturas;
+        
     }
 
     public async void LoadFacturasDetalle(int id)
     {
         var facdet = await _clientService.GetDetalleFacturasId(id);
-        this.facturaListView.ItemsSource = facdet;
+        this.listaListView.ItemsSource = facdet;
     }
 
     private async void btnGuardar_Clicked(object sender, EventArgs e)
@@ -107,7 +109,8 @@ public partial class ListaC : ContentPage
             }
 
             lista.Lista.Clear();
-            facturaListView.ItemsSource = null;
+            listaListView.ItemsSource = null;
+            total = 0;
             await DisplayAlert("Exito!", "Su compra ha sido realizada", "Ok");
         }
         else
@@ -126,6 +129,24 @@ public partial class ListaC : ContentPage
     protected async override void OnAppearing()
     {
         base.OnAppearing();
-        this.facturaListView.ItemsSource = null;
+        this.listaListView.ItemsSource = null;
+        this.facturasListView.ItemsSource = null;
+    }
+
+    private async void facturasListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+        try
+        {
+            var factura = (Facturas)e.Item;
+            LoadFacturasDetalle(factura.CodFac);
+            this.listaListView.IsVisible = true;
+            this.facturasListView.IsVisible = false;
+            this.facturasListView.ItemsSource = null;
+
+        }
+        catch
+        {
+            await DisplayAlert("Error", "No hay más datos que mostrar", "Ok");
+        }
     }
 }

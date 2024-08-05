@@ -10,7 +10,7 @@
                 <Button x:Name="btnFacturas" Text="Facturas realizadas" Clicked="btnFacturas_Clicked" />
                 <Button x:Name="btnGuardar" Text="Realizar compra" Margin="0,0,10,0" Clicked="btnGuardar_Clicked"  />
             </HorizontalStackLayout>
-            <ListView x:Name="facturaListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="facturaListView_ItemTapped" >
+            <ListView x:Name="listaListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listaListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -24,6 +24,26 @@
                                     </Grid.ColumnDefinitions>
                                     <Label Grid.Column="0" Text="{Binding Pago}" TextColor="Red" />
                                     <Label Grid.Column="2" Text="{Binding Cantidad}" FontAttributes="Bold" TextColor="Red" />
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="facturasListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="facturasListView_ItemTapped" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout Padding="5">
+                                <Label Text="{Binding NombreUsu}" FontSize="17" FontAttributes="Bold" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="Red" />
+                                    <Label Grid.Column="2" Text="{Binding Fecha}" FontAttributes="Bold" TextColor="Red" />
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

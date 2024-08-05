@@ -109,14 +109,26 @@ namespace BazarLib
             return await _httpClient.GetFromJsonAsync<IEnumerable<Usuarios>>("api/Usuarios/GetUsuarios");
         }
 
-        public async Task<Usuarios> ValidateUsuario(string email)
+        public async Task<Usuarios> ValidateUsuario(string email, string pass)
         {
-           return await _httpClient.GetFromJsonAsync<Usuarios>($"api/Usuarios/ValidateUsuario?email={email}");
+            var usuarios = await _httpClient.GetFromJsonAsync<IEnumerable<Usuarios>>("api/Usuarios/GetUsuarios");
+            var myuser = usuarios.Where(x => x.Email == email && x.Password == pass).First();
+            return myuser;
         }
 
         public async Task AddUsuario(Usuarios usuario)
         {
             await _httpClient.PostAsJsonAsync("/api/Usuarios/AddUsuario", usuario);
+        }
+
+        public async Task EditUsuario(int id, Usuarios usuario)
+        {
+            await _httpClient.PutAsJsonAsync($"/api/Usuarios/EditUsuario/{id}", usuario);
+        }
+
+        public async Task<Usuarios> GetUsuarioById(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<Usuarios>($"/api/Usuarios/GetUsuarioById/{id}");
         }
     }
 }

@@ -17,30 +17,33 @@ public partial class Login : ContentPage
     {
         if (eMail.Text != null && ePass.Text != null)
         {
-            var a = eMail.Text;
-            var lista = await _clientService.ValidateUsuario(a);
-            if (lista != null)
+            try
             {
-                string detalleUsu = JsonConvert.SerializeObject(lista);
-                Preferences.Set(nameof(App.usuarios), detalleUsu);
-                App.usuarios = lista;
-                if (lista.IsAdmin == true)
-                {
-                    MessagingCenter.Send<App, string>(App.Current as App, "Vendedor", "");
-                    await Shell.Current.GoToAsync("//InicioV");
-                    Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
-                }
-                else if (lista.IsAdmin == false)
-                {
-                    MessagingCenter.Send<App, string>(App.Current as App, "Cliente", "");
-                    await Shell.Current.GoToAsync("//InicioC");
-                    Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
-                }
+                var a = eMail.Text;
+                var b = ePass.Text;
+                var lista = await _clientService.ValidateUsuario(a, b);
+                
+                    string detalleUsu = JsonConvert.SerializeObject(lista);
+                    Preferences.Set(nameof(App.usuarios), detalleUsu);
+                    App.usuarios = lista;
+                    if (lista.IsAdmin == true)
+                    {
+                        MessagingCenter.Send<App, string>(App.Current as App, "Vendedor", "");
+                        await Shell.Current.GoToAsync("//InicioV");
+                        Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
+                    }
+                    else if (lista.IsAdmin == false)
+                    {
+                        MessagingCenter.Send<App, string>(App.Current as App, "Cliente", "");
+                        await Shell.Current.GoToAsync("//InicioC");
+                        Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
+                    }
+               
             }
-            else
+            catch
             {
                 await DisplayAlert("Error", "El usuario ingresado no existe", "Ok");
-            }
+            }            
         }
         else
         {

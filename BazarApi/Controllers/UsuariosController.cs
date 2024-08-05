@@ -21,14 +21,12 @@ namespace BazarAPI.Controllers
             return this.Context.USUARIOS.ToList();
         }
 
-        // GET api/<UsuariosController>/5
-        [HttpGet]
-        public Usuarios ValidateUsuario(string email)
+        [HttpGet("{id}")]
+        public Usuarios GetUsuarioById(int id)
         {
-            return this.Context.USUARIOS.First(usu => usu.Email == email);
+            return this.Context.USUARIOS.First(usu => usu.UsuId == id);
         }
 
-        // POST api/<UsuariosController>
         [HttpPost]
         public void AddUsuario([FromBody] Usuarios usuario)
         {
@@ -36,6 +34,19 @@ namespace BazarAPI.Controllers
             this.Context.SaveChanges();
         }
 
-        
+        [HttpPut("{id}")]
+        public void EditUsuario(int id, [FromBody] Usuarios usuarioEdit)
+        {
+            Usuarios usuarioAct = this.GetUsuarioById(id);
+
+            usuarioAct.NombreUsu = usuarioEdit.NombreUsu;
+            usuarioAct.Email = usuarioEdit.Email;
+            usuarioAct.Password = usuarioEdit.Password;
+            usuarioAct.IsAdmin = usuarioEdit.IsAdmin;
+            
+            this.Context.SaveChanges();
+        }
+
+
     }
 }

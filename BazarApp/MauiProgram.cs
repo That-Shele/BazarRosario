@@ -25,9 +25,9 @@ namespace BazarApp
             builder.Services.AddTransient<OfertasV>();
             builder.Services.AddTransient<StockV>();
             builder.Services.AddTransient<ProductoDetalleC>();
+            builder.Services.AddTransient<PanelUsuariosV>();
             builder.Services.AddScoped<ListaC>();
-            builder.Services.AddSingleton<Login>();
-
+            builder.Services.AddTransient<Login>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
