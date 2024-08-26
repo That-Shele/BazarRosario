@@ -6,15 +6,15 @@
     <ScrollView>
         <VerticalStackLayout Padding="20">
             <Image x:Name="imgDisplay" HorizontalOptions="Center" HeightRequest="500" WidthRequest="500"/>
-            <Label x:Name="nombre" HorizontalOptions="Center" FontSize="26"/>
-            <Label x:Name="categoria" HorizontalOptions="Center" FontSize="26"/>
-            <Label x:Name="tipo" HorizontalOptions="Center" FontSize="26"/>
-            <Label x:Name="precio" HorizontalOptions="Center" FontSize="26"/>
-            <Entry x:Name="eCantidad" Placeholder="Ingrese cantidad a comprar" HorizontalOptions="Center"/>
-            
-            
-           <Button x:Name="btnAgregar" Text="Agregar a la lista" Margin="0,20" Clicked="btnSave_Clicked"/>
-            <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancel_Clicked" />
+            <Label x:Name="nombre" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
+            <Label x:Name="categoria" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
+            <Label x:Name="tipo" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
+            <Label x:Name="precio" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
+            <Entry x:Name="eCantidad" Placeholder="Ingrese cantidad a comprar" HorizontalOptions="Center" FontFamily="Hatfielin"/>
+
+
+            <Button x:Name="btnAgregar" Text="Agregar a la lista" Margin="0,20" Clicked="btnSave_Clicked" FontFamily="Hatfielin"/>
+            <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancel_Clicked" FontFamily="Hatfielin"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

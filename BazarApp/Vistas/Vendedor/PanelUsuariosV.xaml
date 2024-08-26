@@ -10,15 +10,15 @@
                     <DataTemplate>
                         <ViewCell>
                             <VerticalStackLayout Padding="5">
-                                <Label Text="{Binding NombreUsu}" FontSize="17" FontAttributes="Bold" />
+                                <Label Text="{Binding NombreUsu}" FontSize="17" FontAttributes="Bold" FontFamily="Hatfielin"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding UsuId}" TextColor="Red" />
-                                    <Label Grid.Column="2" Text="✔️" FontAttributes="Bold" IsVisible="{Binding IsAdmin}" />
+                                    <Label Grid.Column="0" Text="{Binding UsuId}" TextColor="Red" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="✔️" FontAttributes="Bold" IsVisible="{Binding IsAdmin}" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

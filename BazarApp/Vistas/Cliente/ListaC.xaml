@@ -6,9 +6,9 @@
     <ScrollView>
         <FlexLayout Direction="Column">
             <HorizontalStackLayout Padding="10" FlexLayout.Basis="60">
-                <Button x:Name="btnLista" Text="Ver Carrito" Margin="0,0,10,0" Clicked="btnLista_Clicked"  />
-                <Button x:Name="btnFacturas" Text="Facturas realizadas" Clicked="btnFacturas_Clicked" />
-                <Button x:Name="btnGuardar" Text="Realizar compra" Margin="0,0,10,0" Clicked="btnGuardar_Clicked"  />
+                <Button x:Name="btnLista" Text="Ver Carrito" Margin="0,0,10,0" Clicked="btnLista_Clicked" FontFamily="Hatfielin" />
+                <Button x:Name="btnFacturas" Text="Facturas realizadas" Clicked="btnFacturas_Clicked" FontFamily="Hatfielin"/>
+                <Button x:Name="btnGuardar" Text="Realizar compra" Margin="0,0,10,0" Clicked="btnGuardar_Clicked" FontFamily="Hatfielin" />
             </HorizontalStackLayout>
             <ListView x:Name="listaListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listaListView_ItemTapped" >
                 <ListView.ItemTemplate>
@@ -22,8 +22,8 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="Red" />
-                                    <Label Grid.Column="2" Text="{Binding Cantidad}" FontAttributes="Bold" TextColor="Red" />
+                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="Red" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="{Binding Cantidad}" FontAttributes="Bold" TextColor="Red" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>
@@ -42,8 +42,8 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="Red" />
-                                    <Label Grid.Column="2" Text="{Binding Fecha}" FontAttributes="Bold" TextColor="Red" />
+                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="Red" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="{Binding Fecha}" FontAttributes="Bold" TextColor="Red" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

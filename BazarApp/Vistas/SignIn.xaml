@@ -5,12 +5,12 @@
              Title="SignIn">
     <ScrollView>
         <VerticalStackLayout
-        Padding="30,0"
+        Padding="30"
         Spacing="25">
-            <Entry Placeholder="Nombre" x:Name="eName" HorizontalOptions="Center" WidthRequest="560" />
-            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" />
-            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" />
-            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="crear" Clicked="crear_Clicked"/>
+            <Entry Placeholder="Nombre" x:Name="eName" HorizontalOptions="Center" WidthRequest="560" FontFamily="Hatfielin"/>
+            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" FontFamily="Hatfielin"/>
+            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" FontFamily="Hatfielin"/>
+            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="crear" Clicked="crear_Clicked" FontFamily="Hatfielin"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

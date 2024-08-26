@@ -17,6 +17,10 @@ namespace BazarApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    //NUEVAS FUENTES
+                    fonts.AddFont("Fineta.ttf", "Fineta");
+                    fonts.AddFont("Hatfielin.otf", "Hatfielin");
+                    fonts.AddFont("BrightFlicks-Regular.otf", "Bright");
                 });
             builder.Services.AddBazarApiClient(x => x.ApiBaseAddress = "https://localhost:7254/");
             builder.Services.AddTransient<InicioV>();

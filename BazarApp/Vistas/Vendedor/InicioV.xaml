@@ -6,22 +6,22 @@
     <ScrollView>
     <FlexLayout Direction="Column">
         <HorizontalStackLayout Padding="10" FlexLayout.Basis="60">
-                <Button x:Name="btnAdd" Text="Añadir" Margin="0,0,10,0" Clicked="btnAdd_Clicked"  />
+                <Button x:Name="btnAdd" Text="Añadir" Margin="0,0,10,0" Clicked="btnAdd_Clicked" FontFamily="Hatfielin" />
             </HorizontalStackLayout>
         <ListView x:Name="productListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <VerticalStackLayout Padding="5">
-                            <Label Text="{Binding NombreProdu}" FontSize="17" FontAttributes="Bold" />
+                                <Label Text="{Binding NombreProdu}" FontSize="17" FontAttributes="Bold" FontFamily="Hatfielin"/>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Text="{Binding ProduId}" />
-                                <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="Red" />
+                                    <Label Grid.Column="0" Text="{Binding ProduId}" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="Red" FontFamily="Hatfielin"/>
                             </Grid>
                         </VerticalStackLayout>
                     </ViewCell>

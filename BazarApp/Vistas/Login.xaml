@@ -7,12 +7,26 @@
              Shell.TabBarIsVisible="False">
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" />
-            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" />
-            <Button Text="Iniciar Sesión" HorizontalOptions="Center" WidthRequest="400" x:Name="Log" Clicked="Log_Clicked"/>
-            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="SignUp" Clicked="SignUp_Clicked"/>
+            Padding="30"
+            Spacing="25"
+            BackgroundColor="White">
+            <Image Source="logorosario.png" WidthRequest="150" HeightRequest="150"></Image>
+            
+            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" 
+                   FontFamily="Hatfielin"
+                   TextColor="Black"/>
+            
+            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" 
+                  FontFamily="Hatfielin" 
+                   TextColor="Black"/>
+            
+            <Button Text="Iniciar Sesión" HorizontalOptions="Center" WidthRequest="400" x:Name="Log" Clicked="Log_Clicked"
+                   FontFamily="Hatfielin" 
+                    BackgroundColor="Salmon"/>
+            
+            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="SignUp" Clicked="SignUp_Clicked"
+                    FontFamily="Hatfielin"
+                    BackgroundColor="Salmon"/>
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
