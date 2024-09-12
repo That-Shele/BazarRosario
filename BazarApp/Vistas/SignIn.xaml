@@ -2,15 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.SignIn"
-             Title="SignIn">
+             Title="SignIn"
+             Shell.NavBarIsVisible="False"
+Shell.TabBarIsVisible="False">
     <ScrollView>
         <VerticalStackLayout
         Padding="30"
-        Spacing="25">
-            <Entry Placeholder="Nombre" x:Name="eName" HorizontalOptions="Center" WidthRequest="560" FontFamily="Hatfielin"/>
-            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" FontFamily="Hatfielin"/>
-            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" FontFamily="Hatfielin"/>
-            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="crear" Clicked="crear_Clicked" FontFamily="Hatfielin"/>
+        Spacing="20"
+            BackgroundColor="White">
+            <Image Source="iniciosesion.png" WidthRequest="350" ></Image>
+
+            <Border Stroke="SandyBrown"
+             StrokeThickness="2"
+             StrokeShape="RoundRectangle 40,40,40,40"
+             Padding="16,8"
+             HorizontalOptions="Center">
+                <Entry Placeholder="Nombre" x:Name="eName" HorizontalOptions="Center" WidthRequest="300" FontFamily="Hatfielin" 
+                       TextColor="Black"/>
+            </Border>
+
+            <Border Stroke="SandyBrown"
+             StrokeThickness="2"
+             StrokeShape="RoundRectangle 40,40,40,40"
+             Padding="16,8"
+             HorizontalOptions="Center">
+                <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="300" FontFamily="Hatfielin"
+                       TextColor="Black"/>
+            </Border>
+
+            <Border Stroke="SandyBrown"
+             StrokeThickness="2"
+             StrokeShape="RoundRectangle 40,40,40,40"
+             Padding="16,8"
+             HorizontalOptions="Center">
+                <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="300" FontFamily="Hatfielin"
+                       TextColor="Black"/>
+            </Border>
+
+            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="200" x:Name="crear" Clicked="crear_Clicked" FontFamily="Hatfielin"
+                    BackgroundColor="LightSalmon" TextColor="Black"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

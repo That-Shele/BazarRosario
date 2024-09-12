@@ -2,19 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Cliente.ProductoDetalleC"
-             Title="ProductoDetalleC">
+             Title="ProductoDetalleC"
+              Shell.TabBarIsVisible="False">
     <ScrollView>
-        <VerticalStackLayout Padding="20">
+        <VerticalStackLayout Padding="20"
+                             BackgroundColor="White">
             <Image x:Name="imgDisplay" HorizontalOptions="Center" HeightRequest="500" WidthRequest="500"/>
-            <Label x:Name="nombre" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
-            <Label x:Name="categoria" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
-            <Label x:Name="tipo" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
-            <Label x:Name="precio" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin"/>
-            <Entry x:Name="eCantidad" Placeholder="Ingrese cantidad a comprar" HorizontalOptions="Center" FontFamily="Hatfielin"/>
+            <Label x:Name="nombre" HorizontalOptions="Center" FontSize="26" FontFamily="Bright" TextColor="Black"/>
+            <Label x:Name="categoria" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin" TextColor="MidnightBlue"/>
+            <Label x:Name="tipo" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin" TextColor="Black"/>
+            <Label x:Name="precio" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin" TextColor="Black"/>
 
+            <Border Stroke="SandyBrown"
+             StrokeThickness="2"
+             StrokeShape="RoundRectangle 40,40,40,40"
+             Padding="16,8"
+             HorizontalOptions="Center">
+                <Entry x:Name="eCantidad" Placeholder="Ingrese cantidad a comprar" HorizontalOptions="Center" FontFamily="Hatfielin" TextColor="Black"/>
+            </Border>
 
-            <Button x:Name="btnAgregar" Text="Agregar a la lista" Margin="0,20" Clicked="btnSave_Clicked" FontFamily="Hatfielin"/>
-            <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancel_Clicked" FontFamily="Hatfielin"/>
+            <Button x:Name="btnAgregar" Text="Agregar a la lista" Margin="0,20" Clicked="btnSave_Clicked" FontFamily="Hatfielin"
+                   TextColor="Black" 
+                    BackgroundColor="LightSalmon"/>
+            <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancel_Clicked" FontFamily="Hatfielin"
+                   TextColor="Black"
+                    BackgroundColor="LightSalmon"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

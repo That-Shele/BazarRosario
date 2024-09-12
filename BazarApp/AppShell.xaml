@@ -8,6 +8,7 @@
     xmlns:vendedor="clr-namespace:BazarApp.Vistas.Vendedor"
     xmlns:local="clr-namespace:BazarApp"
     Shell.FlyoutBehavior="Disabled"
+    FlyoutBackgroundColor="PeachPuff"
     >
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" PropertyChanged="FlyoutItem_PropertyChanged">

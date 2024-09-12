@@ -11,22 +11,38 @@
             Spacing="25"
             BackgroundColor="White">
             <Image Source="logorosario.png" WidthRequest="150" HeightRequest="150"></Image>
-            
-            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="560" 
+
+            <Border Stroke="SandyBrown"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 40,40,40,40"
+            Padding="16,8"
+            HorizontalOptions="Center">
+                            <Entry Placeholder="Email" x:Name="eMail" HorizontalOptions="Center" WidthRequest="300" 
                    FontFamily="Hatfielin"
-                   TextColor="Black"/>
-            
-            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="560" 
+                   TextColor="Black"
+                   />
+            </Border>
+
+            <Border Stroke="SandyBrown"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 40,40,40,40"
+            Padding="16,8"
+            HorizontalOptions="Center">
+                
+            <Entry Placeholder="Contraseña" x:Name="ePass" HorizontalOptions="Center" WidthRequest="300" 
                   FontFamily="Hatfielin" 
                    TextColor="Black"/>
-            
-            <Button Text="Iniciar Sesión" HorizontalOptions="Center" WidthRequest="400" x:Name="Log" Clicked="Log_Clicked"
+            </Border>
+
+            <Button Text="Iniciar Sesión" HorizontalOptions="Center" WidthRequest="200" x:Name="Log" Clicked="Log_Clicked"
                    FontFamily="Hatfielin" 
-                    BackgroundColor="Salmon"/>
+                    BackgroundColor="LightSalmon"
+                    TextColor="Black"/>
             
-            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="400" x:Name="SignUp" Clicked="SignUp_Clicked"
+            <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="200" x:Name="SignUp" Clicked="SignUp_Clicked"
                     FontFamily="Hatfielin"
-                    BackgroundColor="Salmon"/>
+                    BackgroundColor="LightSalmon"
+                    TextColor="Black"/>
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
