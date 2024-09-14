@@ -3,24 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Cliente.OfertasC"
              Title="OfertasC"
-              Shell.TabBarIsVisible="False">
+            Shell.NavBarIsVisible="False"
+            Shell.TabBarIsVisible="False">
     <ScrollView>
-        <FlexLayout Direction="Column">
-         
+        <FlexLayout Direction="Column" BackgroundColor="White" AlignItems="Center">
+            <Image Source="ofertas.png" WidthRequest="450" HeightRequest="250" ></Image>
             <ListView x:Name="ofertasListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <VerticalStackLayout Padding="5">
-                                <Label Text="{Binding NombreProdu}" FontSize="17" FontAttributes="Bold" />
+                                <Label Text="{Binding NombreProdu}" FontSize="17" FontAttributes="Bold" TextColor="Black" FontFamily="Hatfielin"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="OFERTA" TextColor="Red" IsVisible="{Binding EsOferta}" FontFamily="Hatfielin"/>
-                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="Red" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="0" Text="OFERTA" TextColor="SandyBrown" IsVisible="{Binding EsOferta}" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="MidnightBlue" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

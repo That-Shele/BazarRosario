@@ -2,23 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Vendedor.PanelUsuariosV"
-             Title="PanelUsuariosV">
+             Title="PanelUsuariosV"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
     <ScrollView>
-        <FlexLayout Direction="Column">
+        <FlexLayout Direction="Column" BackgroundColor="White" AlignItems="Center">
+            <Image Source="usuarios.png" WidthRequest="400" HeightRequest="100" ></Image>
+            
             <ListView x:Name="usuariosListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="usuariosListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <VerticalStackLayout Padding="5">
-                                <Label Text="{Binding NombreUsu}" FontSize="17" FontAttributes="Bold" FontFamily="Hatfielin"/>
+                                <Label Text="{Binding NombreUsu}" FontSize="17" FontAttributes="Bold" FontFamily="Hatfielin" TextColor="Black"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding UsuId}" TextColor="Red" FontFamily="Hatfielin"/>
-                                    <Label Grid.Column="2" Text="✔️" FontAttributes="Bold" IsVisible="{Binding IsAdmin}" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="0" Text="{Binding UsuId}" TextColor="SandyBrown" FontAttributes="Bold" FontSize="15" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="✔️" FontAttributes="Bold" IsVisible="{Binding IsAdmin}" FontFamily="Hatfielin" TextColor="SteelBlue"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

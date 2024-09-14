@@ -2,23 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Vendedor.OfertasV"
-             Title="OfertasV">
+             Title="OfertasV"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
     <ScrollView>
-        <FlexLayout Direction="Column">
+        <FlexLayout Direction="Column" BackgroundColor="White" AlignItems="Center">
+            <Image Source="ofertasv.png" WidthRequest="400" HeightRequest="100" ></Image>
+
             <ListView x:Name="ofertasListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <VerticalStackLayout Padding="5">
-                                <Label Text="{Binding NombreProdu}" FontSize="17" FontAttributes="Bold" FontFamily="Hatfielin"/>
+                                <Label Text="{Binding NombreProdu}" FontSize="17" FontAttributes="Bold" FontFamily="Hatfielin" TextColor="Black"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="OFERTA" TextColor="Red" IsVisible="{Binding EsOferta}" FontFamily="Hatfielin"/>
-                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="Red" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="0" Text="OFERTA" TextColor="SandyBrown" FontAttributes="Bold" FontSize="15" IsVisible="{Binding EsOferta}" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="MidnightBlue" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

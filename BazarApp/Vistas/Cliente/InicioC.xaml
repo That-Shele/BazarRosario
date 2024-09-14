@@ -4,13 +4,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Cliente.InicioC"
              Title="InicioC"
-              Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
              Shell.BackgroundColor="PeachPuff"    
             >
-    
     <ScrollView>
-        
-        <FlexLayout Direction="Column" BackgroundColor="White" >
+        <FlexLayout Direction="Column" BackgroundColor="White" AlignItems="Center">
+            <Image Source="bienvenido.png" WidthRequest="450" HeightRequest="250" ></Image>
+
             <ListView x:Name="productListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>

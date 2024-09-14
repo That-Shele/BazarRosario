@@ -2,32 +2,86 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Vendedor.InsertarProductoV"
-             Title="InsertarProductoV">
+             Title="InsertarProductoV"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
     <ScrollView>
-    <VerticalStackLayout Padding="10">
-            <Entry x:Name="nombreProdu" Placeholder="Nombre del producto" FontFamily="Hatfielin"/>
-            <Label Text="Categoría del producto" FontFamily="Hatfielin"/>
-            <Picker x:Name="cateProdu" >
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Electrodomésticos</x:String>
-                        <x:String>Juguetes</x:String>
-                        <x:String>Ropa</x:String>
-                        <x:String>Deportes</x:String>
-                        <x:String>Confitería</x:String>
-                        <x:String>Condimentos</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            <Entry x:Name="tipoProdu" Placeholder="Tipo de producto" FontFamily="Hatfielin"/>
-            <Entry x:Name="precioProdu" Placeholder="Precio del producto" FontFamily="Hatfielin"/>
-            <Entry x:Name="stockProdu" Placeholder="Stock del producto" FontFamily="Hatfielin"/>
-        <Image x:Name="imgDisplay" HorizontalOptions="Center" HeightRequest="500" WidthRequest="500" />
-            <Button x:Name="buscaImg" HorizontalOptions="Center" Clicked="buscaImg_Clicked" Padding="10" Text="Agregar una imágen" FontFamily="Hatfielin"/>
-            <Label Text="Es oferta?" FontFamily="Hatfielin"/>
-            <Switch x:Name="esOferta"  IsToggled="false" />
-            <Button x:Name="btnSave" Text="Guardar" Margin="0,20" Clicked="btnSave_Clicked" FontFamily="Hatfielin"/>
-            <Button x:Name="btnCancel" Text="Cancelar" Clicked="btnCancel_Clicked" FontFamily="Hatfielin"/>
+    <VerticalStackLayout Padding="30" Spacing="10" BackgroundColor="White">
+
+            <Image Source="insertar.png" WidthRequest="400" HeightRequest="100" ></Image>
+
+            <Border Stroke="SandyBrown"
+             StrokeThickness="2"
+             StrokeShape="RoundRectangle 40,40,40,40"
+             Padding="16,8"
+             HorizontalOptions="Center">
+                <Entry x:Name="nombreProdu" Placeholder="Nombre del producto" FontFamily="Hatfielin" TextColor="Black" WidthRequest="300"/>
+            </Border>
+
+            <Label Text="Categoría del producto" FontFamily="Hatfielin" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+            <Border Stroke="SandyBrown"
+             StrokeThickness="2"
+             StrokeShape="RoundRectangle 40,40,40,40"
+             Padding="16,8"
+             HorizontalOptions="Center">
+                
+                <Picker x:Name="cateProdu" WidthRequest="300" TextColor="Black" FontFamily="Hatfielin">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Electrodomésticos</x:String>
+                            <x:String>Juguetes</x:String>
+                            <x:String>Ropa</x:String>
+                            <x:String>Deportes</x:String>
+                            <x:String>Confitería</x:String>
+                            <x:String>Condimentos</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                
+            </Border>
+
+            <Border Stroke="SandyBrown"
+                 StrokeThickness="2"
+                 StrokeShape="RoundRectangle 40,40,40,40"
+                 Padding="16,8"
+                 HorizontalOptions="Center">
+
+                <Entry x:Name="tipoProdu" Placeholder="Tipo de producto" FontFamily="Hatfielin" WidthRequest="300"
+                       TextColor="Black"/>
+            </Border>
+
+            <Border Stroke="SandyBrown"
+              StrokeThickness="2"
+              StrokeShape="RoundRectangle 40,40,40,40"
+              Padding="16,8"
+              HorizontalOptions="Center">
+                <Entry x:Name="precioProdu" Placeholder="Precio del producto" FontFamily="Hatfielin" WidthRequest="300"
+                       TextColor="Black"/>
+            </Border>
+
+            <Border Stroke="SandyBrown"
+              StrokeThickness="2"
+              StrokeShape="RoundRectangle 40,40,40,40"
+              Padding="16,8"
+              HorizontalOptions="Center">
+                <Entry x:Name="stockProdu" Placeholder="Stock del producto" FontFamily="Hatfielin" WidthRequest="300"
+                       TextColor="Black"/>
+            </Border>
+
+            <Image x:Name="imgDisplay" HorizontalOptions="Center" HeightRequest="250" WidthRequest="250" />
+            <Button x:Name="buscaImg" HorizontalOptions="Center" Clicked="buscaImg_Clicked" Padding="10" Text="Agregar una imágen" FontFamily="Hatfielin" 
+                    BackgroundColor="SandyBrown" WidthRequest="200" TextColor="Black"/>
+        
+            <Label Text="Es oferta?" FontFamily="Hatfielin" HorizontalTextAlignment="Center" TextColor="Black"/>
+        
+            <Switch x:Name="esOferta"  IsToggled="false" HorizontalOptions="Center" BackgroundColor="SandyBrown" Margin="0,10,0,0"/>
+        
+            <Button x:Name="btnSave" Text="Guardar" Margin="0,20" Clicked="btnSave_Clicked" FontFamily="Hatfielin"
+                    BackgroundColor="SandyBrown" TextColor="Black" WidthRequest="200"/>
+            <Button x:Name="btnCancel" Text="Cancelar" Clicked="btnCancel_Clicked" FontFamily="Hatfielin"
+                    BackgroundColor="SandyBrown" TextColor="Black" WidthRequest="200"/>
+        
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
