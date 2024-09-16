@@ -50,6 +50,7 @@ namespace BazarApp
                     oferV.IsVisible = true;
                     listaC.IsVisible = true;
                     usuV.IsVisible = true;
+                    
                 });
             });
         }

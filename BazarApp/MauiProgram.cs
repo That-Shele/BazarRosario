@@ -30,7 +30,7 @@ namespace BazarApp
             builder.Services.AddTransient<ProductoDetalleC>();
             builder.Services.AddTransient<PanelUsuariosV>();
             builder.Services.AddScoped<ListaC>();
-            builder.Services.AddTransient<Login>();
+            builder.Services.AddScoped<Login>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

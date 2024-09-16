@@ -31,13 +31,17 @@ public partial class Login : ContentPage
                         MessagingCenter.Send<App, string>(App.Current as App, "Vendedor", "");
                         await Shell.Current.GoToAsync("//InicioV");
                         Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
+                        eMail.Text = "";
+                        ePass.Text = "";
                     }
                     else if (lista.IsAdmin == false)
                     {
                         MessagingCenter.Send<App, string>(App.Current as App, "Cliente", "");
                         await Shell.Current.GoToAsync("//InicioC");
                         Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
-                    }
+                        eMail.Text = "";
+                        ePass.Text = "";
+                }
                
             }
             catch

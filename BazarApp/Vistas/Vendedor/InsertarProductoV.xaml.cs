@@ -19,34 +19,35 @@ public partial class InsertarProductoV : ContentPage
 
     private async void btnSave_Clicked(object sender, EventArgs e)
     {
-        if (_productos is null && bits is not null)
-        {
-            await _clientService.AddProducto(new Productos
+            if (_productos is null && bits is not null)
             {
-                NombreProdu = nombreProdu.Text,
-                Categoria = cateProdu.SelectedItem.ToString(),
-                TipoProdu = tipoProdu.Text,
-                Precio = Convert.ToDecimal(precioProdu.Text),
-                Stock = Convert.ToInt32(stockProdu.Text),
-                ImgProdu = bits,
-                IsOferta = esOferta.IsToggled
-            });
-        }
-        else
-        {
-            await _clientService.EditProducto(new Productos
+                await _clientService.AddProducto(new Productos
+                {
+                    NombreProdu = nombreProdu.Text,
+                    Categoria = cateProdu.SelectedItem.ToString(),
+                    TipoProdu = tipoProdu.Text,
+                    Precio = Convert.ToDecimal(precioProdu.Text),
+                    Stock = Convert.ToInt32(stockProdu.Text),
+                    ImgProdu = bits,
+                    IsOferta = esOferta.IsToggled
+                });
+                await Navigation.PopAsync();
+            }
+            else
             {
-                ProduId = _productos.ProduId,
-                NombreProdu = nombreProdu.Text,
-                Categoria = cateProdu.SelectedItem.ToString(),
-                TipoProdu = tipoProdu.Text,
-                Precio = Convert.ToDecimal(precioProdu.Text),
-                Stock = Convert.ToInt32(stockProdu.Text),
-                ImgProdu = bits,
-                IsOferta = esOferta.IsToggled
-            });
-        }
-        await Navigation.PopAsync();
+                await _clientService.EditProducto(new Productos
+                {
+                    ProduId = _productos.ProduId,
+                    NombreProdu = nombreProdu.Text,
+                    Categoria = cateProdu.SelectedItem.ToString(),
+                    TipoProdu = tipoProdu.Text,
+                    Precio = Convert.ToDecimal(precioProdu.Text),
+                    Stock = Convert.ToInt32(stockProdu.Text),
+                    ImgProdu = bits,
+                    IsOferta = esOferta.IsToggled
+                });
+                await Navigation.PopAsync();
+            }
     }
 
     private async void btnCancel_Clicked(object sender, EventArgs e)
