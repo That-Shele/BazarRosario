@@ -38,7 +38,7 @@ namespace BazarLib
 
         public async Task EditProducto(Productos producto)
         {
-            await _httpClient.PutAsJsonAsync("/api/Productos/EditProducto", producto);
+            await _httpClient.PutAsJsonAsync($"/api/Productos/EditProducto/{producto.ProduId}", producto);
         }
 
         public async Task DeleteProducto(int id)
