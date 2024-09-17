@@ -32,7 +32,7 @@ public partial class InicioV : ContentPage
                 break;
             case "Eliminar":
                 await _clientService.DeleteProducto(producto.ProduId);
-                await _clientService.GetProductos();
+                productListView.ItemsSource = await _clientService.GetProductos();
                 break;
         }
     }
