@@ -7,7 +7,7 @@
             Shell.TabBarIsVisible="False">
     <ScrollView>
         <FlexLayout Direction="Column" BackgroundColor="White" AlignItems="Center">
-            <Image Source="ofertas.png" WidthRequest="450" HeightRequest="250" ></Image>
+            <Image Source="ofertas.png" WidthRequest="400" HeightRequest="200" ></Image>
             <ListView x:Name="ofertasListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -20,8 +20,9 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="OFERTA" TextColor="SandyBrown" IsVisible="{Binding EsOferta}" FontFamily="Hatfielin"/>
-                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="MidnightBlue" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="0" Text="OFERTA" TextColor="DarkOrange" IsVisible="{Binding EsOferta}" FontAttributes="Bold" FontSize="15" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="{Binding Precio, StringFormat='{}{0:C}'}" FontAttributes="Bold" TextColor="MidnightBlue"
+                                          FontSize="15" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-    
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BazarApp.Vistas.Cliente.InicioC"
              Title="InicioC"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
-             Shell.BackgroundColor="PeachPuff"    
+             Shell.BackgroundColor="SandyBrown"    
             >
+    
+    
     <ScrollView>
         <FlexLayout Direction="Column" BackgroundColor="White" AlignItems="Center">
-            <Image Source="bienvenido.png" WidthRequest="450" HeightRequest="250" ></Image>
-
+            <Image Source="bienvenido.png" WidthRequest="400" HeightRequest="200" ></Image>
+            <Label Text="Productos" FontFamily="Novita" FontSize="35" FontAttributes="Bold" Padding="18"></Label>
             <ListView x:Name="productListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -24,8 +26,9 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding Categoria}" FontFamily="Hatfielin" TextColor="SandyBrown"/>
-                                    <Label Grid.Column="2" Text="{Binding Precio}" FontAttributes="Bold" TextColor="Navy" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="0" Text="{Binding Categoria}" FontFamily="Hatfielin" TextColor="DarkOrange" FontSize="15" FontAttributes="Bold"/>
+                                    <Label Grid.Column="2" Text="{Binding Precio,StringFormat='{}{0:C}'}" FontAttributes="Bold" TextColor="MidnightBlue"
+                                           FontSize="15" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>

@@ -8,43 +8,48 @@
     xmlns:vendedor="clr-namespace:BazarApp.Vistas.Vendedor"
     xmlns:local="clr-namespace:BazarApp"
     Shell.FlyoutBehavior="Disabled"
-    FlyoutBackgroundColor="PeachPuff"
+    FlyoutBackgroundColor="WhiteSmoke"
+    
     >
 
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" PropertyChanged="FlyoutItem_PropertyChanged">
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" PropertyChanged="FlyoutItem_PropertyChanged" >
 
-        <ShellContent  Title="Cerrar Sesión" x:Name="login" Route="Login"
+        <ShellContent  Title="Cerrar Sesión" Icon="cerrar.png" x:Name="login" Route="Login"
                 ContentTemplate="{DataTemplate vistas:Login}"
                 />
 
-
-        <ShellContent Title="Inicio Cliente" x:Name="inicioC" Route="InicioC"
+        <!--Menu Cliente-->
+        <ShellContent Title="Inicio" Icon="casa.png" x:Name="inicioC" Route="InicioC"
                 ContentTemplate="{DataTemplate cliente:InicioC}"
                 />
 
-        <ShellContent Title="Ofertas Cliente" x:Name="oferC" Route="OfertasC"
+        <ShellContent Title="Ofertas" Icon="etiqueta.png" x:Name="oferC" Route="OfertasC"
             ContentTemplate="{DataTemplate cliente:OfertasC}"
            />
 
-        <ShellContent Title="Lista Cliente" x:Name="listaC" Route="ListaC"
+        <ShellContent Title="Tu Lista" Icon="carrito.png" x:Name="listaC" Route="ListaC"
                 ContentTemplate="{DataTemplate cliente:ListaC}"
                 />
 
-        <ShellContent Title="Inicio Vendedor" x:Name="inicioV" Route="InicioV"
+        <!--Menu Vendedor-->
+        <ShellContent Title="Inicio" Icon="casa.png" x:Name="inicioV" Route="InicioV"
             ContentTemplate="{DataTemplate vendedor:InicioV}"
             />
 
-        <ShellContent Title="Ofertas Vendedor" x:Name="oferV" Route="OfertasV"
+        <ShellContent Title="Crear Ofertas" Icon="etiqueta.png" x:Name="oferV" Route="OfertasV"
                     ContentTemplate="{DataTemplate vendedor:OfertasV}"
                     />
 
-        <ShellContent Title="Stock Vendedor" x:Name="stockV" Route="StockV"
+        <ShellContent Title="Stock" Icon="iconstock.png" x:Name="stockV" Route="StockV"
                 ContentTemplate="{DataTemplate vendedor:StockV}"
                 />
         
-        <ShellContent Title="Usuarios" x:Name="usuV" Route="PanelUsuariosV"
+        <ShellContent Title="Usuarios" Icon="editar.png" x:Name="usuV" Route="PanelUsuariosV"
          ContentTemplate="{DataTemplate vendedor:PanelUsuariosV}"
          />
+
+        
     </FlyoutItem>
+
 
 </Shell>

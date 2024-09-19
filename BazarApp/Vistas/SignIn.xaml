@@ -40,7 +40,7 @@ Shell.TabBarIsVisible="False">
             </Border>
 
             <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="200" x:Name="crear" Clicked="crear_Clicked" FontFamily="Hatfielin"
-                    BackgroundColor="LightSalmon" TextColor="Black"/>
+                    BackgroundColor="LightSalmon" TextColor="Black" FontAttributes="Bold"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

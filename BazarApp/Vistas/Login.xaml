@@ -37,12 +37,12 @@
             <Button Text="Iniciar Sesión" HorizontalOptions="Center" WidthRequest="200" x:Name="Log" Clicked="Log_Clicked"
                    FontFamily="Hatfielin" 
                     BackgroundColor="LightSalmon"
-                    TextColor="Black"/>
+                    TextColor="Black" FontAttributes="Bold"/>
             
             <Button Text="Crear Cuenta" HorizontalOptions="Center" WidthRequest="200" x:Name="SignUp" Clicked="SignUp_Clicked"
                     FontFamily="Hatfielin"
                     BackgroundColor="LightSalmon"
-                    TextColor="Black"/>
+                    TextColor="Black" FontAttributes="Bold"/>
     </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

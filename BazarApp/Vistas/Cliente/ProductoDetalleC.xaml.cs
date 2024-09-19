@@ -59,7 +59,7 @@ public partial class ProductoDetalleC : ContentPage
             nombre.Text = _productos.NombreProdu;
             categoria.Text = _productos.Categoria;
             tipo.Text = _productos.TipoProdu;
-            precio.Text = _productos.Precio.ToString();
+            precio.Text =  _productos.Precio.ToString();
             bits = _productos.ImgProdu;
             Stream img = ConvertByteArrayToStream(bits);
             imgDisplay.Source = ImageSource.FromStream(() => img);

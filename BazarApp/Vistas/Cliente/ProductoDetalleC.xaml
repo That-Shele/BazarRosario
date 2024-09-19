@@ -9,11 +9,11 @@
         <VerticalStackLayout Padding="20"
                              BackgroundColor="White" Spacing="10">
             
-            <Image x:Name="imgDisplay" HorizontalOptions="Center" HeightRequest="400" WidthRequest="400"/>
+            <Image x:Name="imgDisplay" HorizontalOptions="Center" HeightRequest="300" WidthRequest="300"/>
             <Label x:Name="nombre" HorizontalOptions="Center" FontSize="45" FontAttributes="Bold" FontFamily="Novita" TextColor="Black"/>
-            <Label x:Name="categoria" HorizontalOptions="Center" FontSize="30" FontFamily="Hatfielin" TextColor="SandyBrown"/>
+            <Label x:Name="categoria" HorizontalOptions="Center" FontSize="35" FontFamily="Hatfielin" TextColor="DarkOrange" FontAttributes="Bold"/>
             <Label x:Name="tipo" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin" TextColor="Black"/>
-            <Label x:Name="precio" HorizontalOptions="Center" FontSize="26" FontFamily="Hatfielin" TextColor="SteelBlue" FontAttributes="Bold"/>
+            <Label x:Name="precio" HorizontalOptions="Center" FontSize="29" FontFamily="Hatfielin" TextColor="SandyBrown" FontAttributes="Bold"/>
 
             <Border Stroke="SandyBrown"
              StrokeThickness="2"
@@ -25,10 +25,12 @@
 
             <Button x:Name="btnAgregar" Text="Agregar a la lista" Margin="0,20" Clicked="btnSave_Clicked" FontFamily="Hatfielin"
                    TextColor="Black" 
+                    FontAttributes="Bold"
                     BackgroundColor="LightSalmon"
                     WidthRequest="200"/>
             <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancel_Clicked" FontFamily="Hatfielin"
                    TextColor="Black"
+                    FontAttributes="Bold"
                     BackgroundColor="LightSalmon"
                     WidthRequest="200"/>
         </VerticalStackLayout>

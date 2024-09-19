@@ -7,12 +7,18 @@
            Shell.TabBarIsVisible="False">
     <ScrollView>
         <FlexLayout Direction="Column" AlignItems="Center" BackgroundColor="White">
-            <Image Source="listcompras.png" WidthRequest="450" HeightRequest="250" ></Image>
+            <Image Source="listcompras.png" WidthRequest="400" HeightRequest="200" ></Image>
             
             <HorizontalStackLayout Padding="15" FlexLayout.Basis="60" Spacing="10">
-                <Button x:Name="btnLista" Text="Ver Carrito" Margin="0,0,10,0" Clicked="btnLista_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="Black"/>
-                <Button x:Name="btnFacturas" Text="Facturas realizadas" Clicked="btnFacturas_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="Black"/>
-                <Button x:Name="btnGuardar" Text="Realizar compra" Margin="0,0,10,0" Clicked="btnGuardar_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="black"/>
+                <Button x:Name="btnLista" Text="Ver Carrito" Margin="0,0,10,0" Clicked="btnLista_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="Black"
+                        HeightRequest="40"
+                        FontAttributes="Bold"/>
+                <Button x:Name="btnFacturas" Text="Facturas realizadas" Margin="0,0,10,0" Clicked="btnFacturas_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="Black"
+                        HeightRequest="40"
+                        FontAttributes="Bold"/>
+                <Button x:Name="btnGuardar" Text="Realizar compra" Margin="0,0,10,0" Clicked="btnGuardar_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="black"
+                        HeightRequest="40"
+                        FontAttributes="Bold"/>
             </HorizontalStackLayout>
             <ListView x:Name="listaListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listaListView_ItemTapped" >
                 <ListView.ItemTemplate>
@@ -26,8 +32,8 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="SteelBlue" FontFamily="Hatfielin"/>
-                                    <Label Grid.Column="2" Text="{Binding Cantidad}" FontAttributes="Bold" TextColor="MidnightBlue" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="0" Text="{Binding Pago,StringFormat='{}{0:C}'}" TextColor="DarkOrange" FontAttributes="Bold" FontSize="15" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="2" Text="{Binding Cantidad}" FontAttributes="Bold" TextColor="MidnightBlue" FontSize="15" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </ViewCell>
@@ -46,7 +52,7 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding Pago}" TextColor="SteelBlue" FontFamily="Hatfielin"/>
+                                    <Label Grid.Column="0" Text="{Binding Pago,StringFormat='{}{0:C}'}" TextColor="DarkOrange" FontAttributes="Bold" FontSize="15" FontFamily="Hatfielin"/>
                                     <Label Grid.Column="2" Text="{Binding Fecha}" FontAttributes="Bold" TextColor="MidnightBlue" FontFamily="Hatfielin"/>
                                 </Grid>
                             </VerticalStackLayout>
