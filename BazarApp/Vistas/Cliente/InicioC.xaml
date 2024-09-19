@@ -13,7 +13,7 @@
     <ScrollView>
         <FlexLayout Direction="Column" BackgroundColor="White" AlignItems="Center">
             <Image Source="bienvenido.png" WidthRequest="400" HeightRequest="200" ></Image>
-            <Label Text="Productos" FontFamily="Novita" FontSize="35" FontAttributes="Bold" Padding="18"></Label>
+            <Label Text="Productos" FontFamily="Novita" FontSize="35" FontAttributes="Bold" TextColor="Black" Padding="18"></Label>
             <ListView x:Name="productListView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="productListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>

@@ -16,7 +16,7 @@
                 <Button x:Name="btnFacturas" Text="Facturas realizadas" Margin="0,0,10,0" Clicked="btnFacturas_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="Black"
                         HeightRequest="40"
                         FontAttributes="Bold"/>
-                <Button x:Name="btnGuardar" Text="Realizar compra" Margin="0,0,10,0" Clicked="btnGuardar_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="black"
+                <Button x:Name="btnGuardar" Text="Realizar" Margin="0,0,10,0" Clicked="btnGuardar_Clicked" FontFamily="Hatfielin" BackgroundColor="LightSalmon" TextColor="black"
                         HeightRequest="40"
                         FontAttributes="Bold"/>
             </HorizontalStackLayout>

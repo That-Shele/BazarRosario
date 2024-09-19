@@ -21,7 +21,7 @@ namespace BazarApp
                     fonts.AddFont("Hatfielin.otf", "Hatfielin");
                     fonts.AddFont("Novita Signora.otf", "Novita");
                 });
-            builder.Services.AddBazarApiClient(x => x.ApiBaseAddress = "https://mfzvhvpd-7254.use2.devtunnels.ms");
+            builder.Services.AddBazarApiClient(x => x.ApiBaseAddress = "https://j0stx85j-7254.use.devtunnels.ms");
             builder.Services.AddTransient<InicioV>();
             builder.Services.AddTransient<InicioC>();
             builder.Services.AddTransient<OfertasC>();

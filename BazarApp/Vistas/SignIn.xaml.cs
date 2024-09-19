@@ -18,9 +18,9 @@ public partial class SignIn : ContentPage
         {
             await _clientService.AddUsuario(new Usuarios
             {
-                NombreUsu = eMail.Text,
-                Email = eMail.Text,
-                Password = ePass.Text,
+                NombreUsu = eName.Text.Trim(),
+                Email = eMail.Text.Trim(),
+                Password = ePass.Text.Trim(),
                 IsAdmin = false
             });
             await Navigation.PopAsync();

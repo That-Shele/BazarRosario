@@ -79,7 +79,7 @@ public partial class ListaC : ContentPage
 
     private async void btnGuardar_Clicked(object sender, EventArgs e)
     {
-        if (lista.Lista != null)
+        if (lista.Lista.Count() > 0)
         {
             var fecha = DateTime.Now;
             CalcularPago();

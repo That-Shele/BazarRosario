@@ -19,8 +19,8 @@ public partial class Login : ContentPage
         {
             try
             {
-                var a = eMail.Text;
-                var b = ePass.Text;
+                var a = eMail.Text.Trim();
+                var b = ePass.Text.Trim();
                 var lista = await _clientService.ValidateUsuario(a, b);
                 
                     string detalleUsu = JsonConvert.SerializeObject(lista);
